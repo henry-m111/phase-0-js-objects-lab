@@ -1,36 +1,37 @@
+// Ensure there is NO code above this line
 const attendee = {
-  attendeeId: "T001",
+  attendeeId: "T001", // Verify if the lab needs 'attendeeID' (capital D)
   name: "Alice Smith",
   event: "JavaScript Conference",
   ticketType: "VIP",
   ticketPrice: 150.00
 };
 
-function logAttendeeName(attendee) {
-  console.log(attendee.name);
+function logAttendeeName(obj) {
+  console.log(obj.name);
 }
 
-function logTicketPrice(attendee) {
-  console.log(attendee.ticketPrice);
+function logTicketPrice(obj) {
+  console.log(obj.ticketPrice);
 }
 
-function updateTicketType(attendee, newTicketType) {
-  attendee.ticketType = newTicketType;
+function updateTicketType(obj, newType) {
+  obj.ticketType = newType;
 }
 
-function updateTicketPrice(attendee, newTicketPrice) {
-  attendee.ticketPrice = newTicketPrice;
+function updateTicketPrice(obj, newPrice) {
+  obj.ticketPrice = newPrice;
 }
 
-function removeEventProperty(attendee) {
-  delete attendee.event;
+function removeEventProperty(obj) {
+  delete obj.event;
 }
 
-function addCheckedInProperty(attendee) {
-  attendee.checkedIn = true;
+function addCheckedInProperty(obj) {
+  obj.checkedIn = true;
 }
 
-// DO NOT REMOVE THIS - CodeGrade needs it to run the tests
+// CodeGrade REQUIRES these exports to run its tests
 module.exports = {
   attendee,
   logAttendeeName,
@@ -40,5 +41,3 @@ module.exports = {
   removeEventProperty,
   addCheckedInProperty
 };
-
-
