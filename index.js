@@ -12,3 +12,13 @@ module.exports = {
   ...(typeof removeEventProperty !== 'undefined' && { removeEventProperty }),
   ...(typeof addCheckedInProperty !== 'undefined' && { addCheckedInProperty })
 };
+// This allows the test suite to see your code
+module.exports = {
+  attendee,
+  logAttendeeName,
+  logTicketPrice,
+  updateTicketType,
+  updateTicketPrice,
+  removeEventProperty,
+  addCheckedInProperty
+};
