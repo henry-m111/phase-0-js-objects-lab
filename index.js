@@ -1,4 +1,3 @@
-// 1. Initialize Object (Double check property name casing!)
 const attendee = {
   attendeeId: "T001",
   name: "Alice Smith",
@@ -7,32 +6,31 @@ const attendee = {
   ticketPrice: 150.00
 };
 
-// 2. Functions (Ensure names match the lab exactly)
-function logAttendeeName(obj) {
-  console.log(obj.name);
+function logAttendeeName(attendee) {
+  console.log(attendee.name);
 }
 
-function logTicketPrice(obj) {
-  console.log(obj.ticketPrice);
+function logTicketPrice(attendee) {
+  console.log(attendee.ticketPrice);
 }
 
-function updateTicketType(obj, newType) {
-  obj.ticketType = newType;
+function updateTicketType(attendee, newTicketType) {
+  attendee.ticketType = newTicketType;
 }
 
-function updateTicketPrice(obj, newPrice) {
-  obj.ticketPrice = newPrice;
+function updateTicketPrice(attendee, newTicketPrice) {
+  attendee.ticketPrice = newTicketPrice;
 }
 
-function removeEventProperty(obj) {
-  delete obj.event;
+function removeEventProperty(attendee) {
+  delete attendee.event;
 }
 
-function addCheckedInProperty(obj) {
-  obj.checkedIn = true;
+function addCheckedInProperty(attendee) {
+  attendee.checkedIn = true;
 }
 
-// 3. ESSENTIAL: Module Exports (The test suite MUST have these)
+// DO NOT REMOVE THIS - CodeGrade needs it to run the tests
 module.exports = {
   attendee,
   logAttendeeName,
@@ -42,4 +40,5 @@ module.exports = {
   removeEventProperty,
   addCheckedInProperty
 };
+
 
