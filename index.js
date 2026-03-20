@@ -30,7 +30,6 @@ function addCheckedInProperty(attendee) {
   attendee.checkedIn = true;
 }
 
-// CRITICAL: CodeGrade cannot see your work without this block
 module.exports = {
   attendee,
   logAttendeeName,
