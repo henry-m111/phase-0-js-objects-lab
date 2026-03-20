@@ -1,37 +1,36 @@
-// Ensure there is NO code above this line
 const attendee = {
-  attendeeId: "T001", // Verify if the lab needs 'attendeeID' (capital D)
+  attendeeId: "T001",
   name: "Alice Smith",
   event: "JavaScript Conference",
   ticketType: "VIP",
   ticketPrice: 150.00
 };
 
-function logAttendeeName(obj) {
-  console.log(obj.name);
+function logAttendeeName(attendee) {
+  console.log(attendee.name);
 }
 
-function logTicketPrice(obj) {
-  console.log(obj.ticketPrice);
+function logTicketPrice(attendee) {
+  console.log(attendee.ticketPrice);
 }
 
-function updateTicketType(obj, newType) {
-  obj.ticketType = newType;
+function updateTicketType(attendee, newTicketType) {
+  attendee.ticketType = newTicketType;
 }
 
-function updateTicketPrice(obj, newPrice) {
-  obj.ticketPrice = newPrice;
+function updateTicketPrice(attendee, newTicketPrice) {
+  attendee.ticketPrice = newTicketPrice;
 }
 
-function removeEventProperty(obj) {
-  delete obj.event;
+function removeEventProperty(attendee) {
+  delete attendee.event;
 }
 
-function addCheckedInProperty(obj) {
-  obj.checkedIn = true;
+function addCheckedInProperty(attendee) {
+  attendee.checkedIn = true;
 }
 
-// CodeGrade REQUIRES these exports to run its tests
+// CRITICAL: CodeGrade cannot see your work without this block
 module.exports = {
   attendee,
   logAttendeeName,
